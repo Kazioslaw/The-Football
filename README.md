@@ -1,11 +1,10 @@
 # Introduction 
 This project is a trial of creating a clone of Football Manager game.
 A time evaluated for creating this project is 150 hours per programmer.
-The main goals are:
+    The main goals are:
 - having a lot of fun while designing
 - learning new technologies
 - improving planning and team work related skills
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
 # Getting Started
 1.	Installation process
@@ -34,5 +33,5 @@ TODO: Describe and show how to build your code and run the tests.
 5. SQL - for storing configuration and game data
 
 # Contribute
-wilq as full stack programmer
-Kazioslaw as backend programmer and tester
+- wilq as full stack programmer
+- Kazioslaw as backend programmer and tester

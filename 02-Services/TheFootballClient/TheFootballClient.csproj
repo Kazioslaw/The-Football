@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Cities.cs" />
     <Compile Include="Controllers\WeatherForecastController.cs" />
+    <Compile Include="GenerationClubs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="WeatherForecast.cs" />
   </ItemGroup>
@@ -15,6 +17,7 @@
   <ItemGroup>
     <Content Include="appsettings.Development.json" />
     <Content Include="appsettings.json" />
+    <Content Include="Files\cities.json" />
     <Content Include="Properties\launchSettings.json" />
   </ItemGroup>
 
@@ -24,10 +27,6 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Files\" />
   </ItemGroup>
 
 </Project>

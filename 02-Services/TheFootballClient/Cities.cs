@@ -1,9 +1,16 @@
-﻿namespace TheFootballClient
+﻿using System.Text.Json.Serialization;
+
+namespace TheFootballClient
 {
     public class Cities
     {
-        public int id { get; set; }
-        public string? name { get; set; }
-        public string? unique_name { get; set; }
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        [JsonPropertyName("unique_name")]
+        public string? UniqueName { get; set; }
     }
 }

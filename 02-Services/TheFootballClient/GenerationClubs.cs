@@ -21,10 +21,10 @@ namespace TheFootballClient
             var cityYear = new List<string>();
 
             // Adding to list
-            for (int i = 0; i < cityDeserialized.Count; i++)
+            foreach (var c in cityDeserialized)
             {
                 DateTime founded = start.AddDays(year.Next(range));
-                clubs.Add($"Club Name: KS {cityDeserialized[i]}");
+                clubs.Add($"Club Name: KS {c.Name}");
                 cityYear.Add($"Founded: {founded}");
             }
 

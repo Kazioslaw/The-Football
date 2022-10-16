@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TheFootballClient
+namespace TheFootballClient.JsonModels
 {
-    public class Cities
+    public class City
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

@@ -1,34 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc.Diagnostics;
-using System.Diagnostics;
-using System.Text.Json;
+﻿using System.Text.Json;
+using TheFootballClient.JsonModels;
+using TheFootballClient.Models;
 
 namespace TheFootballClient
 {
     public class GenerationClubs
     {
-        static void Generator()
+        /// <summary>
+        /// Deserializalization from json file
+        /// and generation club names with club foundation date
+        /// </summary>
+        public static void Generator()
         {
-            // Retrives and deserialize data from file 
             var citiesFile = File.ReadAllText(@"Files\cities.json");
-            var cityDeserialized = JsonSerializer.Deserialize<List<Cities>>(citiesFile);
+            var citiesDeserialized = JsonSerializer.Deserialize<List<City>>(citiesFile);
 
-            Random year = new Random();
+            var random = new Random();
             DateTime start = new DateTime(1900, 1, 1);
             DateTime end = new DateTime(2020, 12, 31);
             int range = (end - start).Days;
 
-            var clubs = new List<string>();
-            var cityYear = new List<string>();
+            var clubs = new List<Club>();
 
-            // Adding to list
-            foreach (var c in cityDeserialized)
+            if (citiesDeserialized != null)
             {
-                DateTime founded = start.AddDays(year.Next(range));
-                clubs.Add($"Club Name: KS {c.Name}");
-                cityYear.Add($"Founded: {founded}");
+                foreach (var city in citiesDeserialized)
+                {                    
+                    if (city.Name != null && city.Name.Length > 1)
+                    {                        
+                        DateTime founded = start.AddDays(random.Next(range));
+                        clubs.Add(new Club($"KS {city.Name}", founded));
+                    }
+                }
             }
-
         }
-
     }
 }

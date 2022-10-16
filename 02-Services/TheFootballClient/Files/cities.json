@@ -1,0 +1,331 @@
+[{
+    "id":1,
+    "name": "Warszawa",
+    "unique_name": "warszawa"
+},
+{
+    "id":2,
+    "name": "Krak\u00F3w",
+    "unique_name": "krakow"
+},
+{
+    "id":3,
+    "name": "Szczecin",
+    "unique_name": "szczecin"
+},    
+{
+    "id":4,
+    "name": "\u0141\u00F3d\u017A",
+    "unique_name": "lodz"
+},
+{
+    "id":5,
+    "name": "Wroc\u0141aw",
+    "unique_name": "wroclaw"
+},
+{
+    "id":6,
+    "name":"Zielona G\u00F3ra",
+    "unique_name": "zielona gora"
+},
+{
+    "id":7,
+    "name": "Gda\u0144sk",
+    "unique_name": "gdansk"
+},
+{
+    "id":8,
+    "name": "Pozna\u0144",
+    "unique_name": "poznan"
+},
+{
+    "id":9,
+    "name": "\u015Awinou\u015bcie",
+    "unique_name": "swinouscie"
+},
+{
+    "id":10,
+    "name": "D\u0105browa G\u00F3rnicza",
+    "unique_name" : "dabrowa gornicza"
+},
+{
+    "id":11,
+    "name": "Bydgoszcz",
+    "unique_name": "bydgoszcz"
+},
+{
+    "id":12,
+    "name": "Katowice",
+    "unique_name" : "katowice"
+},
+{
+    "id":13,
+    "name": "Cz\u0119stochowa",
+    "unique_name" : "czestochowa"
+},
+{
+    "id":14,
+    "name": "Jaworzno",
+    "unique_name" : "jawozno"
+},
+{
+    "id":15,
+    "name": "Opole",
+    "unique_name" : "opole"
+},
+{
+    "id":16,
+    "name": "Rybnik",
+    "unique_name" : "rybnik"
+},
+{
+    "id":17,
+    "name": "Lublin",
+    "unique_name": "lublin"
+},
+{
+    "id":18,
+    "name": "Gdynia",
+    "unique_name": "gdynia"
+},
+{
+    "id":19,
+    "name": "Gliwice",
+    "unique_name": "gliwice"
+},
+{
+    "id":20,
+    "name": "Bielsko-Bia\u0142a",
+    "unique_name": "bielsko-biala"
+},
+{
+    "id":21,
+    "name": "Rzesz\u00F3w",
+    "unique_name": "rzeszow"
+},
+{
+    "id":22,
+    "name": "Toru\u0144",
+    "unique_name": "torun"
+},
+{
+    "id":23,
+    "name": "Radom",
+    "unique_name": "radom"
+},
+{
+    "id":24,
+    "name": "Kielce",
+    "unique_name": "kielce"
+},
+{
+    "id":25,
+    "name": "Jelenia G\u00F3ra",
+    "unique_name": "jelenia gora"
+},
+{
+    "id":26,
+    "name": "Bia\u0142ystok",
+    "unique_name": "bialystok"
+},
+{
+    "id":27,
+    "name":"Koszalin",
+    "unique_name": "koszalin"
+},
+{
+    "id":28,
+    "name":"Sosnowiec",
+    "unique_name": "sosnowiec"
+},
+{
+    "id":29,
+    "name":"Olsztyn",
+    "unique_name": "olsztyn"
+},
+{
+    "id":30,
+    "name": "P\u0142ock",
+    "unique_name": "plock"
+},
+{
+    "id":31,
+    "name": "Gorz\u00F3w Wielkopolski",
+    "unique_name": "gorzow wielkopolski"
+},
+{
+    "id":32,
+    "name":"Tarnobrzeg",
+    "unique_name": "tarnobrzeg"
+},
+{
+    "id":33,
+    "name":"Jastrz\u0119bie-Zdr\u00F3j",
+    "unique_name":"jastrzebie zdroj"
+},
+{
+    "id":34,
+    "name":"Wa\u0142brzych",
+    "unique_name": "walbrzych"
+},
+{
+    "id":35,
+    "name": "W\u0142oc\u0142awek",
+    "unique_name": "wloclawek"
+},
+{
+    "id":36,
+    "name": "Konin",
+    "unique_name": "konin"
+},
+{
+    "id":37,
+    "name": "Tychy",
+    "unique_name": "tychy"
+},
+{
+    "id":38,
+    "name": "Zabrze",
+    "unique_name": "zabrze"
+},
+{
+    "id":39,
+    "name":"Elbl\u0105g",
+    "unique_name": "elblag"
+},
+{
+    "id":40,
+    "name": "Ruda \u015Al\u0105ska" ,
+    "unique_name": "ruda slaska"
+},
+{
+    "id":41,
+    "name": "Tarn\u00F3w",
+    "unique_name": "tarnow"
+},
+{
+    "id":42,
+    "name":"Bytom",
+    "unique_name":"bytom"
+},
+{
+    "id":43,
+    "name":"Kalisz",
+    "unique_name": "kalisz"
+},
+{
+    "id":44,
+    "name": "Piotrk\u00F3w Trybunalski",
+    "unique_name": "piotrkow trybunalski"
+},
+{
+    "id":45,
+    "name": "Mys\u0142owice",
+    "unique_name": "myslowice"
+},
+{
+    "id":46,
+    "name": "Suwa\u0142ki",
+    "unique_name": "suwalki"
+},
+{
+    "id":47,
+    "name": "\u017Bory",
+    "unique_name": "zory"
+},
+{
+    "id":48,
+    "name": "Grudzi\u0105dz",
+    "unique_name": "grudziadz"
+},
+{
+    "id":49,
+    "name": "Nowy S\u0105cz",
+    "unique_name": "nowy sacz"
+},
+{
+    "id":50,
+    "name": "Legnica",
+    "unique_name": "legnica"
+},
+{
+    "id":51,
+    "name": "Bia\u0142a Podlaska",
+    "unique_name": "biala podlaska"
+},
+{
+    "id":52,
+    "name":"Przemy\u015Bl",
+    "unique_name": "przemysl"
+},
+{
+    "id":53,
+    "name": "Krosno",
+    "unique_name": "krosno"
+},
+{
+    "id":54,
+    "name": "S\u0142upsk",
+    "unique_name": "slupsk"
+},
+{
+    "id":55,
+    "name": "Piekary \u015Al\u0105skie",
+    "unique_name": "piekary slaskie"
+},
+{
+    "id":56,
+    "name":"Che\u0142m",
+    "unique_name": "chelm"
+},
+{
+    "id":57,
+    "name": "Skierniewice",
+    "unique_name": "skierniewice"
+},
+{
+    "id":58,
+    "name":"Ostro\u0142\u0119ka",
+    "unique_name": "ostroleka"
+},
+{
+    "id":59,
+    "name":"Chorz\u00F3w",
+    "unique_name" : "chorzow"
+},
+{
+    "id":60,
+    "name": "\u0141om\u017Ca",
+    "unique_name": "lomza"
+},
+{
+    "id":61,
+    "name":"Leszno",
+    "unique_name": "leszno"
+},
+{
+    "id":62,
+    "name":"Siedlce",
+    "unique_name":"siedlce"
+},
+{
+    "id":63,
+    "name": "Zamo\u015B\u0107",
+    "unique_name": "zamosc"
+},
+{
+    "id":64,
+    "name":"Siemianowice \u015Al\u0105skie",
+    "unique_name": "siemianowice slaskie"
+},
+{
+    "id":65,
+    "name":"Sopot",
+    "unique_name":"sopot"
+},
+{
+    "id":66,
+    "name":"\u015Awi\u0119toch\u0142owice \u015Al\u0105skie",
+    "unique_name":"swietochlowice slaskie"
+}
+]

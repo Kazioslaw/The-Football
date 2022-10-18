@@ -1,4 +1,6 @@
-﻿namespace TheFootballClient
+﻿using TheFootballClient.Models;
+
+namespace TheFootballClient
 {
     public class Players
     {
@@ -35,9 +37,12 @@
                 secondNames.RemoveAt(0);
             }
 
-            var playerName = new List<string>();
+            var playerName = new List<Player>();
             var random = new Random();
-
+            DateTime start = new DateTime(1985, 1, 1);
+            DateTime end = new DateTime(2005, 12, 31);
+            var range = (end - start).Days;
+            var cityDeserialized = new GenerationClubs();
             var counter3 = 0;
             var rows3 = 1000;
 
@@ -45,7 +50,8 @@
             {
                 var first = random.Next(0, firstNames.Count + 1);
                 var second = random.Next(0, secondNames.Count + 1);
-                playerName.Add(firstNames[first] + " " + secondNames[second]);
+                var year = start.AddDays(random.Next(range));
+                playerName.Add(new Player(firstNames[first] + " " + secondNames[second], start.AddDays(random.Next(range))));
                 counter3++;
             }
         }

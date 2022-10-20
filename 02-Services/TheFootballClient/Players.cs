@@ -7,52 +7,54 @@ namespace TheFootballClient
         static void Generating()
         {
             var firstNames = new List<string>();
-            var secondNames = new List<string>();
+            var lastName = new List<string>();
 
             using (var firstNamesCSV = new StreamReader(@"\Files\Imiona_Męskie.csv"))
             {
-                var counter1 = 0;
-                var rows1 = 1000;
-                while (counter1 <= rows1)
+                var firstCounter= 0;
+                var firstRows = 1000;
+                while (firstCounter <= firstRows)
                 {
                     var line = firstNamesCSV.ReadLine();
                     var values = line.Split(',');
                     firstNames.Add(values[0]);
-                    counter1++;
+                    firstCounter++;
                 }
                 firstNames.RemoveAt(0);
             }
 
-            using (var secondNamesCSV = new StreamReader(@"\Files\NAZWISKA_MĘSKIE.csv"))
+            using (var lastNamesCSV = new StreamReader(@"\Files\NAZWISKA_MĘSKIE.csv"))
             {
-                var counter2 = 0;
-                var rows2 = 1000;
-                while (counter2 <= rows2)
+                var secondCounter = 0;
+                var secondRows = 1000;
+                while (secondCounter <= secondRows)
                 {
-                    var line = secondNamesCSV.ReadLine();
+                    var line = lastNamesCSV.ReadLine();
                     var values = line.Split(',');
                     firstNames.Add(values[0]);
-                    counter2++;
+                    secondCounter++;
                 }
-                secondNames.RemoveAt(0);
+                lastName.RemoveAt(0);
             }
 
-            var playerName = new List<Player>();
+            var playersData = new List<Player>();
+            
             var random = new Random();
             DateTime start = new DateTime(1985, 1, 1);
             DateTime end = new DateTime(2005, 12, 31);
             var range = (end - start).Days;
-            var cityDeserialized = new GenerationClubs();
-            var counter3 = 0;
-            var rows3 = 1000;
+            
+            //var cityDeserialized = new GenerationClubs();
+            var thirdCounter = 0;
+            var thirdRows = 1000;
 
-            while (counter3 <= rows3)
+            while (thirdCounter <= thirdRows)
             {
                 var first = random.Next(0, firstNames.Count + 1);
-                var second = random.Next(0, secondNames.Count + 1);
+                var second = random.Next(0, lastName.Count + 1);
                 var year = start.AddDays(random.Next(range));
-                playerName.Add(new Player(firstNames[first] + " " + secondNames[second], start.AddDays(random.Next(range))));
-                counter3++;
+                playersData.Add(new Player(firstNames[first] + " " + lastName[second], start.AddDays(random.Next(range))));
+                thirdCounter++;
             }
         }
     }

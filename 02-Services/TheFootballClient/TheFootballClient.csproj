@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Controllers\WeatherForecastController.cs" />
+    <Compile Include="GenerationClubs.cs" />
+    <Compile Include="JsonModels\City.cs" />
+    <Compile Include="Models\Club.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json" />
+    <Content Include="appsettings.json" />
+    <Content Include="Files\cities.json" />
     <Content Include="Properties\launchSettings.json" />
   </ItemGroup>
 

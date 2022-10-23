@@ -9,6 +9,11 @@ namespace TfcDomain.Models
         [ForeignKey(nameof(EmployeePosition))]
         public int EmployeePositionId { get; set; }
 
+        public Employee()
+        {
+
+        }
+
         public Employee(string firstName, string lastName, int employeePosition)
         {
             FirstName = firstName;

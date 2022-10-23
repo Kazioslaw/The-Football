@@ -10,10 +10,12 @@ namespace TfcDomain.Models
         public int SecondClubId { get; set; }
         public int FirstTeamScore { get; set; }
         public int SecondTeamScore  { get; set; }
+        [ForeignKey(nameof(Competition))]
         public int CompetitionId { get; set; }
         public DateTime Date { get; set; }
 
         public Club FirstClub { get; set; }
         public Club SecondClub { get; set; }
+        public Competition Competition { get; set; }
     }
 }

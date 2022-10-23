@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TfcInfrastracture.DbContext;
 
@@ -11,9 +12,10 @@ using TfcInfrastracture.DbContext;
 namespace TfcInfrastracture.Migrations
 {
     [DbContext(typeof(TheFootballClientContext))]
-    partial class TheFootballClientContextModelSnapshot : ModelSnapshot
+    [Migration("20221023234343_AddingNextModels")]
+    partial class AddingNextModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

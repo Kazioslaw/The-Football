@@ -4,13 +4,13 @@
     {
         public string? PlayerName { get; set; }
         public DateTime Birthday { get; set; }
-        //public string? Birthplace { get; set; }
+        public string? Birthplace { get; set; }
 
-        public Player(string? playerName, DateTime birthday/*, string? birthplace*/)
+        public Player(string? playerName, DateTime birthday, string? birthplace)
         {
             PlayerName = playerName;
             Birthday = birthday;
-            //Birthplace = birthplace;
+            Birthplace = birthplace;
         }
     }
 }

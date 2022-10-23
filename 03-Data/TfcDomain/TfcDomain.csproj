@@ -6,19 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\Match.cs" />
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="TfcDomain.sln" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
-  </ItemGroup>
-
 </Project>

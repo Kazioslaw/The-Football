@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using TheFootballClient.JsonModels;
-using TheFootballClient.Models;
+using TfcDomain.Models;
 
 namespace TheFootballClient
 {

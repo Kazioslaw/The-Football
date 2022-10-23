@@ -1,7 +1,10 @@
-﻿namespace TfcDomain.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TfcDomain.Models
 {
-    internal class Entity
+    public class Entity
     {
+        [Key]
         public int Id { get; set; }
     }
 }

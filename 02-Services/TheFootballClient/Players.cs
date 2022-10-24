@@ -10,7 +10,7 @@ namespace TheFootballClient
         public static void Generating()
         {
             var firstNames = new List<string>();
-            var lastName = new List<string>();
+            var lastNames = new List<string>();
 
             var counter = 0;
             var rowLimit = 1000;
@@ -35,10 +35,10 @@ namespace TheFootballClient
                 {
                     var line = lastNamesCSV.ReadLine();
                     var values = line.Split(',');
-                    lastName.Add(values[0]);
+                    lastNames.Add(values[0]);
                     counter++;
                 }
-                lastName.RemoveAt(0);
+                lastNames.RemoveAt(0);
                 counter = 0;
             }
 
@@ -54,10 +54,10 @@ namespace TheFootballClient
             while (counter <= rowLimit)
             {
                 var first = random.Next(0, firstNames.Count);
-                var second = random.Next(0, lastName.Count);
+                var second = random.Next(0, lastNames.Count);
                 var year = start.AddDays(random.Next(range));
                 var birthplace = citiesDeserialized[random.Next(0, citiesDeserialized.Count)];
-                playersData.Add(new Player(firstNames[first] + " " + lastName[second], year, birthplace.Name));
+                playersData.Add(new Player(firstNames[first] + " " + lastNames[second], year, birthplace.Name));
                 counter++;
             }
             counter = 0;

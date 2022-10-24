@@ -1,26 +1,28 @@
-﻿using System.Text.Json;
+﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
+using System.Text.Json;
 using TheFootballClient.JsonModels;
 using TheFootballClient.Models;
+using TheFootballClient.Logic;
 
 namespace TheFootballClient
 {
     public class GenerationClubs
-    {
+    { 
         /// <summary>
         /// Deserializalization from json file
         /// and generation club names with club foundation date
         /// </summary>
+
         public static void Generator()
         {
-            var citiesFile = File.ReadAllText(@"Files\cities.json");
-            var citiesDeserialized = JsonSerializer.Deserialize<List<City>>(citiesFile);
-
             var random = new Random();
             DateTime start = new DateTime(1900, 1, 1);
             DateTime end = new DateTime(2020, 12, 31);
             int range = (end - start).Days;
 
             var clubs = new List<Club>();
+
+            var citiesDeserialized = new CitiesDeserialization().Deserialize();
 
             if (citiesDeserialized != null)
             {

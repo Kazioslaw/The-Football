@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
-using System.Text.Json;
-using TheFootballClient.JsonModels;
-using TheFootballClient.Models;
+﻿using TfcDomain.Models;
 using TheFootballClient.Logic;
 
 namespace TheFootballClient
@@ -12,7 +9,6 @@ namespace TheFootballClient
         /// Deserializalization from json file
         /// and generation club names with club foundation date
         /// </summary>
-
         public static void Generator()
         {
             var random = new Random();

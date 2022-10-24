@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
-using System.Text.Json;
+﻿using System.Text.Json;
 using TheFootballClient.JsonModels;
 
 namespace TheFootballClient.Logic

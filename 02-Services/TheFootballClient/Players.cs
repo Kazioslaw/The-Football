@@ -1,7 +1,5 @@
-﻿using System.Collections.Specialized;
-using System.Diagnostics;
+﻿using TfcDomain.Models;
 using TheFootballClient.Logic;
-using TheFootballClient.Models;
 
 namespace TheFootballClient
 {

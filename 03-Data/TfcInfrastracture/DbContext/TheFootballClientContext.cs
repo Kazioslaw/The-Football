@@ -20,6 +20,8 @@ namespace TfcInfrastracture.DbContext
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeePosition> EmployeePositions { get; set; }
         public DbSet<Match>? Matches { get; set; }
+        public DbSet<Player>? Players { get; set; }
+        public DbSet<PlayerAttributeSet>? PlayerAttributeSets { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)

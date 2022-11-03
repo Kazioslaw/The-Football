@@ -25,4 +25,8 @@
     <ProjectReference Include="..\..\03-Data\TfcInfrastracture\TfcInfrastracture.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

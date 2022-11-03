@@ -1,6 +1,6 @@
-﻿namespace TheFootballClient.Models
+﻿namespace TfcDomain.Models
 {
-    public class Player
+    public class Player : Entity
     {
         public string? PlayerName { get; set; }
         public DateTime Birthday { get; set; }

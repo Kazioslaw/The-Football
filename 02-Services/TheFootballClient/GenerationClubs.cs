@@ -18,7 +18,7 @@ namespace TheFootballClient
 
             var clubs = new List<Club>();
 
-            var citiesDeserialized = new CitiesDeserialization().Deserialize();
+            var citiesDeserialized = new CitiesDeserialization().Deserialize(@"Files\cities.json");
 
             if (citiesDeserialized != null)
             {

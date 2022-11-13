@@ -2,6 +2,7 @@
 {
     public class PlayerAttributeSet : Entity
     {
+        public int PlayerId { get; set; }
         public byte Acceleration { get; set; }
         public byte Adaptability { get; set; }
         public byte Aggression { get; set; }
@@ -62,5 +63,6 @@
         public byte Versatility { get; set; }
         public byte Vision { get; set; }
         public byte WorkRate { get; set; }
+        public DateTime lastUpdate { get; set; }
     }
 }

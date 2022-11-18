@@ -1,4 +1,7 @@
-﻿namespace TfcDomain.Models
+﻿using Microsoft.VisualBasic;
+using System.ComponentModel.DataAnnotations;
+
+namespace TfcDomain.Models
 {
     public class PlayerAttributeSet : Entity
     {
@@ -62,7 +65,9 @@
         public byte TrendToPunch { get; set; }
         public byte Versatility { get; set; }
         public byte Vision { get; set; }
-        public byte WorkRate { get; set; }
-        public DateTime lastUpdate { get; set; }
+        public byte WorkRate { get; set; }       
+        public DateTime LastUpdate { get; set; }
+
+        //public ICollection<Player>? Players { get; set; }
     }
 }

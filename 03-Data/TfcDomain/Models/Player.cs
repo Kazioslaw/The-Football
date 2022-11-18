@@ -1,8 +1,11 @@
-﻿namespace TfcDomain.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TfcDomain.Models
 {
     public class Player : Entity
     {
         public string? PlayerName { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
         public string? Birthplace { get; set; }
 

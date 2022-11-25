@@ -9,6 +9,8 @@ namespace TfcDomain.Models
         public DateTime Birthday { get; set; }
         public string? Birthplace { get; set; }
 
+        public PlayerAttributeSet PlayerAttributeSet { get; set; }
+
         public Player(string? playerName, DateTime birthday, string? birthplace)
         {
             PlayerName = playerName;

@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System.ComponentModel.DataAnnotations;
-
-namespace TfcDomain.Models
+﻿namespace TfcDomain.Models
 {
     public class PlayerAttributeSet : Entity
     {
@@ -68,6 +65,6 @@ namespace TfcDomain.Models
         public byte WorkRate { get; set; }       
         public DateTime LastUpdate { get; set; }
 
-        //public ICollection<Player>? Players { get; set; }
+        public ICollection<Player> Players { get; set; }
     }
 }

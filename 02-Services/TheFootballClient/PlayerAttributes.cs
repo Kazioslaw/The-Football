@@ -1,7 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using System.Reflection;
-using System.Runtime.ConstrainedExecution;
-using TfcDomain.Models;
+﻿using TfcDomain.Models;
 
 namespace TheFootballClient
 {

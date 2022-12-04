@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TfcInfrastracture.DbContext;
 
@@ -11,9 +12,10 @@ using TfcInfrastracture.DbContext;
 namespace TfcInfrastracture.Migrations
 {
     [DbContext(typeof(TheFootballClientContext))]
-    partial class TheFootballClientContextModelSnapshot : ModelSnapshot
+    [Migration("20221204195214_GoalDef")]
+    partial class GoalDef
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -412,11 +414,13 @@ namespace TfcInfrastracture.Migrations
 
             modelBuilder.Entity("TfcDomain.Models.PlayerAttributeSet", b =>
                 {
-                    b.HasOne("TfcDomain.Models.Player", null)
+                    b.HasOne("TfcDomain.Models.Player", "Player")
                         .WithMany("PlayerAttributeSet")
                         .HasForeignKey("PlayerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Player");
                 });
 
             modelBuilder.Entity("TfcDomain.Models.Club", b =>

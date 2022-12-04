@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TfcInfrastracture.DbContext;
 
@@ -11,9 +12,10 @@ using TfcInfrastracture.DbContext;
 namespace TfcInfrastracture.Migrations
 {
     [DbContext(typeof(TheFootballClientContext))]
-    partial class TheFootballClientContextModelSnapshot : ModelSnapshot
+    [Migration("20221127155140_PlayerAttributeSetModel")]
+    partial class PlayerAttributeSetModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,10 +165,15 @@ namespace TfcInfrastracture.Migrations
                     b.Property<string>("Birthplace")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PlayerAttributeSetId")
+                        .HasColumnType("int");
+
                     b.Property<string>("PlayerName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PlayerAttributeSetId");
 
                     b.ToTable("Players");
                 });
@@ -367,8 +374,6 @@ namespace TfcInfrastracture.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PlayerID");
-
                     b.ToTable("PlayerAttributeSets");
                 });
 
@@ -410,13 +415,15 @@ namespace TfcInfrastracture.Migrations
                     b.Navigation("SecondClub");
                 });
 
-            modelBuilder.Entity("TfcDomain.Models.PlayerAttributeSet", b =>
+            modelBuilder.Entity("TfcDomain.Models.Player", b =>
                 {
-                    b.HasOne("TfcDomain.Models.Player", null)
-                        .WithMany("PlayerAttributeSet")
-                        .HasForeignKey("PlayerID")
+                    b.HasOne("TfcDomain.Models.PlayerAttributeSet", "PlayerAttributeSet")
+                        .WithMany("Players")
+                        .HasForeignKey("PlayerAttributeSetId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PlayerAttributeSet");
                 });
 
             modelBuilder.Entity("TfcDomain.Models.Club", b =>
@@ -436,9 +443,9 @@ namespace TfcInfrastracture.Migrations
                     b.Navigation("Employees");
                 });
 
-            modelBuilder.Entity("TfcDomain.Models.Player", b =>
+            modelBuilder.Entity("TfcDomain.Models.PlayerAttributeSet", b =>
                 {
-                    b.Navigation("PlayerAttributeSet");
+                    b.Navigation("Players");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data;
 using System.Reflection;
 using System.Security.Claims;
 
@@ -37,7 +38,7 @@ namespace TfcDomain.Models
         public byte Finishing { get; set; }
         public byte FirstTouch { get; set; }
         public byte Flair { get; set; }
-        public byte FreeKicks { get; set; }
+        public byte FreeKickTaking { get; set; }
         public byte Handling { get; set; }
         public byte Heading { get; set; }
         public byte ImportantMatches { get; set; }
@@ -54,7 +55,7 @@ namespace TfcDomain.Models
         public byte OneOnOnes { get; set; }
         public byte Pace { get; set; }
         public byte Passing { get; set; }
-        public byte PenalityTaking { get; set; }
+        public byte PenaltyTaking { get; set; }
         public byte Positioning { get; set; }
         public byte Pressure { get; set; }
         public byte Professionalism { get; set; }
@@ -74,7 +75,6 @@ namespace TfcDomain.Models
         public byte WorkRate { get; set; }
         public DateTime LastUpdate { get; set; }
 
-        //public ICollection<Player> Player { get; set; }
         private Player Player { get; set; }
 
         public void SetAttrubutesGoalkeeper(int playerId, DateTime lastUpdate, byte agility, byte anticipation,
@@ -309,6 +309,14 @@ namespace TfcDomain.Models
             Technique = technique;
             WorkRate = workRate;
         }
-        //public void SetAttributeGeneral (byte )
+        public void SetAttributeGeneral(int playerId, DateTime lastUpdate, byte corners, byte determination, byte freeKickTaking, byte penaltyTaking)
+        {
+            PlayerID = playerId;
+            LastUpdate = lastUpdate;
+            Corners = corners;
+            Determination = determination;
+            FreeKickTaking = freeKickTaking;
+            PenaltyTaking = penaltyTaking;
+        }
     }
 }

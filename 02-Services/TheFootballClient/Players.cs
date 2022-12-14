@@ -1,13 +1,11 @@
-﻿using System.Collections.Specialized;
-using System.Diagnostics;
+﻿using TfcDomain.Models;
 using TheFootballClient.Logic;
-using TheFootballClient.Models;
 
 namespace TheFootballClient
 {
     public class Players
     {
-        public static void Generating()
+        public static void Generating(string firstCSV = @"Files\Imiona_Męskie.csv", string lastCSV = @"Files\NAZWISKA_MĘSKIE.csv")
         {
             var firstNames = new List<string>();
             var lastNames = new List<string>();
@@ -15,7 +13,7 @@ namespace TheFootballClient
             var counter = 0;
             var rowLimit = 1000;
 
-            using (var firstNamesCSV = new StreamReader(@"Files\Imiona_Męskie.csv"))
+            using (var firstNamesCSV = new StreamReader(firstCSV))
             {
                 while (counter <= rowLimit)
                 {
@@ -29,7 +27,7 @@ namespace TheFootballClient
 
             }
 
-            using (var lastNamesCSV = new StreamReader(@"Files\NAZWISKA_MĘSKIE.csv"))
+            using (var lastNamesCSV = new StreamReader(lastCSV))
             {
                 while (counter <= rowLimit)
                 {
@@ -49,7 +47,7 @@ namespace TheFootballClient
             DateTime end = new DateTime(2005, 12, 31);
             var range = (end - start).Days;
 
-            var citiesDeserialized = new CitiesDeserialization().Deserialize();
+            var citiesDeserialized = new CitiesDeserialization().Deserialize(@"Files\cities.json");
 
             while (counter <= rowLimit)
             {

@@ -28,12 +28,12 @@ namespace TheFootballClient
             playerAttributes.Decisions = (byte)rnd.Next(0, 21);
             playerAttributes.Determination = (byte)rnd.Next(0, 21);
             playerAttributes.Dirtiness = (byte)rnd.Next(0, 21);
-            playerAttributes.Drybbling = (byte)rnd.Next(0, 21);
+            playerAttributes.Dribbling = (byte)rnd.Next(0, 21);
             playerAttributes.Eccentricity = (byte)rnd.Next(0, 21);
             playerAttributes.Finishing = (byte)rnd.Next(0, 21);
             playerAttributes.FirstTouch = (byte)rnd.Next(0, 21);
             playerAttributes.Flair = (byte)rnd.Next(0, 21);
-            playerAttributes.FreeKicks = (byte)rnd.Next(0, 21);
+            playerAttributes.FreeKickTaking = (byte)rnd.Next(0, 21);
             playerAttributes.Handling = (byte)rnd.Next(0, 21);
             playerAttributes.Heading = (byte)rnd.Next(0, 21);
             playerAttributes.ImportantMatches = (byte)rnd.Next(0, 21);
@@ -50,7 +50,7 @@ namespace TheFootballClient
             playerAttributes.OneOnOnes = (byte)rnd.Next(0, 21);
             playerAttributes.Pace = (byte)rnd.Next(0, 21);
             playerAttributes.Passing = (byte)rnd.Next(0, 21);
-            playerAttributes.PenalityTaking = (byte)rnd.Next(0, 21);
+            playerAttributes.PenaltyTaking = (byte)rnd.Next(0, 21);
             playerAttributes.Positioning = (byte)rnd.Next(0, 21);
             playerAttributes.Pressure = (byte)rnd.Next(0, 21);
             playerAttributes.Professionalism = (byte)rnd.Next(0, 21);

@@ -15,14 +15,14 @@ namespace TheFootballClientTests
             var testFileLocation = startupPath + @"Files\cities.json";
             var deserialization = new CitiesDeserialization();
             List<City> testCityList = new List<City>();
-            var expectedCount = 0;
+            var testCountNumber = 0;
 
             //Act
             testCityList = deserialization.Deserialize(testFileLocation);
 
 
             //Assert
-            Assert.AreNotEqual(testCityList.Count, expectedCount);
+            Assert.AreNotEqual(testCityList.Count, testCountNumber);
 
         }
         [TestMethod]

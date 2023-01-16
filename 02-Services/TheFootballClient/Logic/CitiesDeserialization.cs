@@ -7,7 +7,8 @@ namespace TheFootballClient.Logic
     {
         public List<City> Deserialize(string citiesFileLocation = @"Files\cities.json")
         {
-            var citiesDeserialized = JsonSerializer.Deserialize<List<City>>(citiesFileLocation);
+            var citiesFile = File.ReadAllText(citiesFileLocation);
+            var citiesDeserialized = JsonSerializer.Deserialize<List<City>>(citiesFile);
             if (citiesDeserialized != null)
             {
                 return citiesDeserialized;

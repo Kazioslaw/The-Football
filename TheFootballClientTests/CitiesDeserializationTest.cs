@@ -33,8 +33,7 @@ namespace TheFootballClientTests
             var testFileLocation = startupPath + @"Files\testList.json";
             var deserialization = new CitiesDeserialization();
             List<City> testCityList = new List<City>();
-            var expectedCount = 0;
-
+            
             //Act
 
             //Assert

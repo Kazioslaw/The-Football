@@ -9,7 +9,7 @@ namespace TheFootballClient
         /// Deserializalization from json file
         /// and generation club names with club foundation date
         /// </summary>
-        public static void Generator()
+        public List<Club> Generator()
         {
             var random = new Random();
             DateTime start = new DateTime(1900, 1, 1);
@@ -29,8 +29,9 @@ namespace TheFootballClient
                         DateTime founded = start.AddDays(random.Next(range));
                         clubs.Add(new Club($"KS {city.Name}", founded));
                     }
-                }
+                }               
             }
+            return clubs;
         }
     }
 }

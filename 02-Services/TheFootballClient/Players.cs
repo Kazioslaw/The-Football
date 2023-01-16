@@ -1,11 +1,12 @@
-﻿using TfcDomain.Models;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using TfcDomain.Models;
 using TheFootballClient.Logic;
 
 namespace TheFootballClient
 {
     public class Players
     {
-        public static void Generating(string firstCSV = @"Files\Imiona_Męskie.csv", string lastCSV = @"Files\NAZWISKA_MĘSKIE.csv")
+        public List<Player> Generating(string firstCSV = @"Files\Imiona_Męskie.csv", string lastCSV = @"Files\NAZWISKA_MĘSKIE.csv")
         {
             var firstNames = new List<string>();
             var lastNames = new List<string>();
@@ -59,7 +60,7 @@ namespace TheFootballClient
                 counter++;
             }
             counter = 0;
+            return playersData;
         }
-
     }
 }

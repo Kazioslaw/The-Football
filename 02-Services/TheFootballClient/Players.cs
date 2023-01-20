@@ -1,5 +1,4 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using TfcDomain.Models;
+﻿using TfcDomain.Models;
 using TheFootballClient.Logic;
 
 namespace TheFootballClient
